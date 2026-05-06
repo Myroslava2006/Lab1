@@ -1,0 +1,3 @@
+export default function Loading() {
+  return <div><div className="sk sk-small mb"></div><div className="details-panel skeleton-card"><div className="row mb"><div className="actions"><div className="sk sk-avatar"></div><div className="sk sk-heading"></div></div><div className="actions"><div className="sk sk-button"></div><div className="sk sk-button"></div></div></div><div className="grid2">{[...Array(5)].map((_, i) => <div key={i}><div className="sk sk-small mb"></div><div className="sk sk-line"></div></div>)}</div><div className="sk sk-small mb"></div><div className="sk sk-line"></div><div className="sk sk-line short"></div></div></div>
+}
