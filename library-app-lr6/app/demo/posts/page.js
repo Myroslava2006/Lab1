@@ -1,0 +1,1 @@
+export default async function PostsPage(){const r=await fetch('https://jsonplaceholder.typicode.com/posts');const posts=await r.json();return <div className="container section"><h1>Пости з JSONPlaceholder</h1><div className="grid">{posts.slice(0,9).map(p=><article key={p.id} className="card card-body"><h2>{p.title}</h2><p className="muted">{p.body}</p></article>)}</div></div>}

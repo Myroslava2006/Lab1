@@ -1,0 +1,5 @@
+import { Suspense } from 'react'
+import { PostSkeleton, StatSkeleton } from '@/components/skeletons/PostSkeleton'
+async function FastStats(){await new Promise(r=>setTimeout(r,500));return <div className="stats"><div className="stat"><span>Швидка стата 1</span><br/><b>123</b></div><div className="stat"><span>Швидка стата 2</span><br/><b>456</b></div><div className="stat"><span>Швидка стата 3</span><br/><b>789</b></div></div>}
+async function SlowPosts(){await new Promise(r=>setTimeout(r,3000));const res=await fetch('https://jsonplaceholder.typicode.com/posts?_limit=3');const posts=await res.json();return <div><h2>Повільні пости</h2>{posts.map(p=><article className="card card-body" key={p.id}><h3>{p.title}</h3><p>{p.body}</p></article>)}</div>}
+export default function StreamingPage(){return <div className="container section"><h1>Streaming Demo</h1><div className="notice">Швидка секція зʼявиться через 0.5 сек, повільна — через 3 сек.</div><Suspense fallback={<div className="stats"><StatSkeleton/><StatSkeleton/><StatSkeleton/></div>}><FastStats/></Suspense><br/><Suspense fallback={<><PostSkeleton/><PostSkeleton/><PostSkeleton/></>}><SlowPosts/></Suspense></div>}

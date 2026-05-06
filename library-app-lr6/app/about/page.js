@@ -1,0 +1,2 @@
+export const metadata = { title: 'Про бібліотеку' }
+export default function AboutPage(){return <section className="section"><div className="container"><h1>Про бібліотеку</h1><p>Цей проект призначений для автоматизації роботи бібліотеки. Система допомагає вести облік книг, читачів, видачі та повернення літератури.</p><p>У проекті є каталог книг, сторінка деталей, dashboard, бронювання та API Routes для CRUD операцій.</p></div></section>}

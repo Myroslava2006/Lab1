@@ -1,0 +1,2 @@
+export const revalidate=10
+export default async function RevalidatedPage(){const r=await fetch('https://jsonplaceholder.typicode.com/posts/2');const p=await r.json();return <div className="container section"><h1>Revalidated пост</h1><div className="success">Production: оновлення кожні 10 секунд.</div><article className="card card-body"><h2>{p.title}</h2><p>{p.body}</p><p className="muted">Завантажено: {new Date().toLocaleTimeString()}</p></article></div>}
