@@ -1,0 +1,9 @@
+git checkout -b LR13
+git add .
+git commit -m "Week 13: production-ready library deployment"
+git push -u origin LR13
+
+# Після перевірки можна merge у main:
+git checkout main
+git merge LR13
+git push origin main

@@ -1,0 +1,9 @@
+Environment Variables для Vercel:
+
+MONGODB_URI=твій MongoDB Atlas connection string
+NEXTAUTH_SECRET=твій секрет
+NEXTAUTH_URL=https://твій-проєкт.vercel.app
+NEXT_PUBLIC_SITE_URL=https://твій-проєкт.vercel.app
+
+MongoDB Atlas:
+Network Access -> Add IP Address -> Allow Access from Anywhere -> 0.0.0.0/0
