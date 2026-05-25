@@ -1,0 +1,10 @@
+Команди для GitHub:
+
+git checkout -b LR1
+git add .
+git commit -m "LR1: create library landing page and about"
+git push -u origin LR1
+
+Якщо ще немає remote:
+git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO.git
+git push -u origin LR1
